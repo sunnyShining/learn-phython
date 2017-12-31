@@ -80,3 +80,25 @@ class Student(object):
         print('%s: %s' % (self.name, self.score))
 bart = Student('sunny', 99)
 bart.print_score()
+
+class Screen(object):
+    @property
+    def width(self):
+    	return self._width
+    @width.setter
+    def width(self, val):
+    	self._width = val;
+    @property
+    def height(self):
+    	return self._height
+    @height.setter
+    def height(self, val):
+    	self._height = val
+    @property
+    def resolution(self):
+    	return self._width*self._height
+
+s = Screen()
+s.width = 10
+s.height = 10
+print(s.resolution)
